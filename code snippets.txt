@@ -53,25 +53,26 @@ This HTML file provides a basic interface for displaying CSV data in a structure
 
 3.>   Here's a combined blueprint outlining the working steps of all the provided code snippets:
 
-HTML, CSS, JavaScript (CSV Data Display):
+(1)HTML, CSS, JavaScript (CSV Data Display):
 
-Provides a user interface with an input field to upload a CSV file.
-Reads the CSV file using JavaScript's FileReader API.
-Parses the CSV data and populates a table with headers: URL, Overview, Campus, Courses, Scholarships, Admission, Placements, and Results.
-Displays the data in the table, categorized according to specified keywords.
-HTML, CSS, JavaScript (JSON Data Display):
+.Provides a user interface with an input field to upload a CSV file.
+.Reads the CSV file using JavaScript's FileReader API.
+.Parses the CSV data and populates a table with headers: URL, Overview, Campus, Courses, Scholarships, Admission, Placements, and Results.
+.Displays the data in the table, categorized according to specified keywords.
+.HTML, CSS, JavaScript (JSON Data Display):
 
-Provides a user interface with an input field to upload a JSON file.
-Reads the JSON file using JavaScript's FileReader API.
-Parses the JSON data into an array of objects.
-Extracts URL and other data from each object and populates a table similar to CSV Data Display, categorizing data according to specified keywords.
-Python Script:
+(2)Provides a user interface with an input field to upload a JSON file.
+.Reads the JSON file using JavaScript's FileReader API.
+.Parses the JSON data into an array of objects.
+.Extracts URL and other data from each object and populates a table similar to CSV Data Display, categorizing data according to specified keywords.
 
-Reads data from a CSV file containing URLs and descriptions.
-Extracts base URLs from the URLs column.
-Groups descriptions by base URL and aggregates them into lists.
-Converts the grouped data into a list of dictionaries where each dictionary represents a URL along with its descriptions.
-Writes the resulting JSON data to a JSON file.
-Working together, these components provide a comprehensive solution for processing CSV and JSON data, restructuring it based on predefined criteria, and displaying it in a user-friendly format for analysis and visualization.
+(3)Python Script:
+
+.Reads data from a CSV file containing URLs and descriptions.
+.Extracts base URLs from the URLs column.
+.Groups descriptions by base URL and aggregates them into lists.
+.Converts the grouped data into a list of dictionaries where each dictionary represents a URL along with its descriptions.
+.Writes the resulting JSON data to a JSON file.
+.Working together, these components provide a comprehensive solution for processing CSV and JSON data, restructuring it based on predefined criteria, and .displaying it in a user-friendly format for analysis and visualization.
 
 
