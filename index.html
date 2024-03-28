@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Data Display</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" id="csvFile" accept=".csv" />
+    <button onclick="convertCSV()">Convert</button>
+
+    <table id="dataTable">
+      <tr>
+        <th>URL</th>
+        <th>Overview</th>
+        <th>Campus</th>
+        <th>Courses</th>
+        <th>Scholarships</th>
+        <th>Admission</th>
+        <th>Placements</th>
+        <th>Results</th>
+      </tr>
+    </table>
+
+    <script>
+      function convertCSV() {
+        const fileInput = document.getElementById("csvFile");
+        const table = document.getElementById("dataTable");
+
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          const csv = event.target.result;
+          const rows = csv.split("\n");
+
+          for (let i = 0; i < rows.length; i++) {
+            const cols = rows[i].split(",");
+            const url = cols[0];
+            const rowData = cols.slice(1);
+
+            const newRow = table.insertRow();
+            newRow.insertCell().textContent = url;
+
+            const keywords = [
+              "overview",
+              "campus",
+              "courses",
+              "scholarships",
+              "admission",
+              "placements",
+              "results",
+            ];
+
+            for (let keyword of keywords) {
+              let found = false;
+              for (let j = 0; j < rowData.length; j++) {
+                const data = rowData[j].toLowerCase();
+                if (data.includes(keyword)) {
+                  newRow.insertCell().textContent = rowData[j];
+                  found = true;
+                  break;
+                }
+              }
+              if (!found) {
+                newRow.insertCell();
+              }
+            }
+          }
+        };
+
+        const file = fileInput.files[0];
+        reader.readAsText(file);
+      }
+    </script>
+  </body>
+</html>
