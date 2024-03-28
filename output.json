@@ -1,0 +1,24 @@
+[
+  {
+    "URL": "https://example.com/data/ai",
+    "desc1": "Example AI Overview - Test",
+    "desc2": "Example AI Campus - Test",
+    "desc3": "Example AI Courses 2023-2024"
+  },
+  {
+    "URL": "https://example.com/data/php",
+    "desc1": "PHP Institute, India Campus Facilities - PHP",
+    "desc2": "PHP Institute, India Courses & Fees - PHP",
+    "desc3": "PHP Institute, India Scholarships - PHP",
+    "desc4": "PHP Institute, India Admission Process - PHP"
+  },
+  {
+    "URL": "https://example.com/data/python",
+    "desc1": "Python Institute - India overview - Python",
+    "desc2": "Python Institute - India Campus Facilities - Python",
+    "desc3": "Python Institute - India Courses & Fees - Python",
+    "desc4": "Python Institute - India Scholarships - Python",
+    "desc5": "Python Institute - India Results - Python",
+    "desc6": "Python Institute - India Results - Python"
+  }
+]
